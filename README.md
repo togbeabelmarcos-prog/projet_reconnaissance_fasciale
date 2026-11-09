@@ -1,5 +1,7 @@
 # Projet Reconnaissance Faciale
 
+> 📖 **Nouveau ici ?** Suis le [guide pas à pas, du début à la fin](GUIDE.md).
+
 Pipeline complet de reconnaissance faciale en temps réel : collecte de données, extraction d'embeddings avec **MobileFaceNet**, classification **k-NN / One-Class SVM**, et daemon de verrouillage d'écran (**FaceLock**) sur Linux.
 
 ## Pipeline
