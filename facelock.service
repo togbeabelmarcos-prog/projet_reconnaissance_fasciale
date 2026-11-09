@@ -1,0 +1,34 @@
+[Unit]
+Description=FaceLock Daemon - Surveillance faciale continue
+Documentation=https://github.com/Club-IA-CAEB-PN/facelock
+After=display-manager.service
+Wants=display-manager.service
+
+[Service]
+Type=simple
+User=nicaise
+Group=video
+Environment="DISPLAY=:0"
+Environment="XAUTHORITY=/home/nicaise/.Xauthority"
+Environment="DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus"
+ExecStart=/home/nicaise/Bureau/cyber_agent/facelock_start.sh
+Restart=always
+RestartSec=3
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=facelock
+
+# Permissions
+NoNewPrivileges=false
+ProtectSystem=false
+ProtectHome=read-only
+
+# Webcam
+DevicePolicy=auto
+DeviceAllow=/dev/video0 rw
+
+# Working directory
+WorkingDirectory=/home/nicaise/Bureau/cyber_agent/projet licence
+
+[Install]
+WantedBy=multi-user.target

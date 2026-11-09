@@ -1,0 +1,29 @@
+# Environnement virtuel (~2 Go)
+recon_fas/
+
+# Données personnelles : photos de visage
+data/
+data_recup/
+
+# Modèles et embeddings (biométriques / poids)
+model/*
+!model/README.md
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+
+# Entraînement
+logs/
+*.h5
+*.tflite
+
+# Éditeur / OS
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
